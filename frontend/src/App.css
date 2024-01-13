@@ -1,0 +1,127 @@
+body {
+  background-color: rgb(240, 240, 240);
+  font-family: "Ubuntu", sans-serif;
+}
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  gap: 1em;
+}
+#card {
+  width: 45%;
+  border-radius: 10px;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.25s ease-in-out;
+}
+#card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#cardbutton {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#cardbutton a {
+  text-decoration: none;
+  color: white;
+}
+#cardbutton button {
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  color: white;
+}
+#cardbutton button:first-child {
+  background-color: #01a701;
+}
+#cardbutton button:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.868);
+}
+#createbutton,#searchbutton,#backtohomepage {
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  background-color: #00bfff;
+}
+#createbutton a ,#searchbutton a,#backtohomepage a{
+  text-decoration: none;
+  color: white;
+}
+#searcharea{
+  display: flex;
+  justify-content: space-around;
+}
+#searchbar{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+#searchbar input{
+  border: .5px solid;
+  border-radius: 10px;
+  width: 75%;
+  padding-left: 1em;
+}
+#searchbar button{
+  width: 15%;
+}
+#searchinput:focus {
+  outline: none;
+}
+#heading{
+  text-align: center;
+  font-size: 2em;
+  color: #ff3700e1;
+}
+
+
+
+
+#backtohomepage {
+  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+#heading {
+  margin-bottom: 20px;
+}
+
+#paras {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
