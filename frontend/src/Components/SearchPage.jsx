@@ -4,6 +4,7 @@ import axios from "axios";
 
 export const SearchPage = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);
+  const [searchError, setSearchError] = useState("");
   const nameOfABook = new URLSearchParams(window.location.search).get("q");
 
   useEffect(() => {
@@ -13,8 +14,11 @@ export const SearchPage = ({ location }) => {
           `https://bookstore-surz.onrender.com/api/external-books?name=:${nameOfABook}`
         );
         setSearchResults(response.data.data);
+        setSearchError("");
       } catch (error) {
         console.error("Error fetching search results:", error);
+        setSearchResults([]);
+        setSearchError("Error fetching search results. Please try again later.");
       }
     };
 
@@ -40,7 +44,11 @@ export const SearchPage = ({ location }) => {
 
       <h2 id="heading">Search Results</h2>
 
+      {searchError && <p style={{ color: "red" }}>{searchError}</p>}
+
       <div id="container">
+        {searchResults.length === 0 && !searchError && <p>No results found.</p>}
+        
         {searchResults.map((book) => (
           <div id="card" key={book.isbn}>
             <p>Name: {book.name}</p>
@@ -56,3 +64,4 @@ export const SearchPage = ({ location }) => {
     </div>
   );
 };
+

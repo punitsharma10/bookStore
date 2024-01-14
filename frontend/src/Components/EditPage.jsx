@@ -20,7 +20,7 @@ export const EditPage = ({ onBookUpdated }) => {
 
   useEffect(() => {
     fetchBookDetails();
-  }, []);
+  }, [id]);
 
   const fetchBookDetails = async () => {
     try {
@@ -49,7 +49,7 @@ export const EditPage = ({ onBookUpdated }) => {
   return (
 <div>
       <h2 id="heading">Edit Book</h2>
-      <form>
+      <form id='paras'>
         <label>Name:</label>
         <input type="text" name="name" value={book.name} onChange={handleInputChange} />
 
@@ -57,7 +57,7 @@ export const EditPage = ({ onBookUpdated }) => {
         <input type="text" name="isbn" value={book.isbn} onChange={handleInputChange} />
 
         <label>Authors:</label>
-        <input type="text" name="authors" value={book.authors.join(',')} onChange={handleInputChange} />
+        <input type="text" name="authors" value={book.authors} onChange={handleInputChange} />
 
         <label>Country:</label>
         <input type="text" name="country" value={book.country} onChange={handleInputChange} />

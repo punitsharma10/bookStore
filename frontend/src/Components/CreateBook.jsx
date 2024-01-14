@@ -24,6 +24,15 @@ export const CreateBook = ({ onBookCreated }) => {
   };
 
   const handleCreate = async () => {
+
+    const requiredFields = ["name", "isbn", "authors", "country", "number_of_pages", "publisher", "release_date"];
+
+    const isFormValid = requiredFields.every(field => newBook[field].trim() !== "");
+
+    if (!isFormValid) {
+      alert("Please fill all details.");
+      return;
+    }
     try {
       await axios.post(API_URL, newBook);
       onBookCreated();

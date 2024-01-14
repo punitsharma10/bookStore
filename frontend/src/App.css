@@ -89,7 +89,7 @@ body {
 
 #backtohomepage {
   margin-bottom: 10px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 10px;
 }
 
@@ -124,4 +124,18 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#no-results-message {
+  text-align: center;
+  color: #555;
+  margin-top: 20px;
 }
