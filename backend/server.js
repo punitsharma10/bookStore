@@ -46,6 +46,8 @@ bookSchema.pre("save", function (next) {
 
 const Book = mongoose.model("Book", bookSchema);
 
+
+
 app.post("/api/v1/books", async (req, res) => {
   try {
     const newBookData = req.body;
@@ -72,6 +74,8 @@ async function getNextBookId() {
   }
 }
 
+
+
 app.get("/api/v1/books", async (req, res) => {
   try {
     const { name, country, publisher, release_date } = req.query;
@@ -92,6 +96,8 @@ app.get("/api/v1/books", async (req, res) => {
   }
 });
 
+
+
 app.patch("/api/v1/books/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -109,6 +115,8 @@ app.patch("/api/v1/books/:id", async (req, res) => {
   }
 });
 
+
+
 app.delete("/api/v1/books/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -124,6 +132,8 @@ app.delete("/api/v1/books/:id", async (req, res) => {
   }
 });
 
+
+
 app.get("/api/v1/books/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -137,6 +147,8 @@ app.get("/api/v1/books/:id", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+
 
 app.get("/api/external-books", async (req, res) => {
   try {
@@ -169,7 +181,6 @@ app.get("/api/external-books", async (req, res) => {
     });
   } catch (error) {
     console.error("Error fetching external books:", error);
-
     res.status(500).json({
       status_code: 500,
       status: "error",
