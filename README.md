@@ -82,13 +82,5 @@ If you're a developer looking to contribute or customize the project, refer to t
 We welcome contributions from the community! Please see our [Contribution Guidelines](link-to-guidelines) for details on how to get involved.
 
 # License
-<<<<<<< HEAD
-This project is licensed under the MIT License.
-=======
 This project is licensed under the MIT License.
 
-
-
-
-
->>>>>>> 146756ae8694d47d56f8e05ed30fcf9510d0b56c
