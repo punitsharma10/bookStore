@@ -64,9 +64,36 @@ If you're a developer looking to contribute or customize the project, refer to t
 - **Search:**
   - Utilizes the Ice And Fire API to search for books based on various criteria such as title, author, or genre.
 
+
+# BookStore API Endpoints 
+
+`Base URL` - https://bookstore-surz.onrender.com
+
+### EndPoints
+> * `GET` - https://bookstore-surz.onrender.com/api/v1/books
+> * `POST` - https://bookstore-surz.onrender.com/api/v1/books
+> * `PATCH` - https://bookstore-surz.onrender.com/api/v1/books/:id
+> * `DELETE` - https://bookstore-surz.onrender.com/api/v1/books/:id
+> * `GET` - https://bookstore-surz.onrender.com/api/external-books?name=:nameOfABook
+
+
+# BookStore LocalHost API Endpoints 
+
+`Base URL` - http://localhost:8080/
+
+### EndPoints
+> * `GET` - http://localhost:8080/api/v1/books
+> * `POST` - http://localhost:8080/api/v1/books
+> * `PATCH` - http://localhost:8080/api/v1/books/:id
+> * `DELETE` - http://localhost:8080/api/v1/books/:id
+> * `GET` - http://localhost:8080/api/external-books?name=:nameOfABook
+>
 # Deploy Link
 - Frontend Live Link: https://book-store-qp9w.vercel.app/
 - Backend Live Link: https://bookstore-surz.onrender.com/
+
+
+
 
 # Project Preview
 ## HomePage
